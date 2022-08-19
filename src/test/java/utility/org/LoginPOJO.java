@@ -7,7 +7,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.FindBys;
 import org.openqa.selenium.support.PageFactory;
 
-public class LoginPOJO extends utility{
+public class LoginPOJO extends Baseclass{
 
 	public LoginPOJO(){
 		

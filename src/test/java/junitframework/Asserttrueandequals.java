@@ -10,9 +10,9 @@ import org.junit.Ignore;
 import org.junit.Test;
 
 import utility.org.LoginPOJO;
-import utility.org.utility;
+import utility.org.Baseclass;
 
-public class Asserttrueandequals extends utility{
+public class Asserttrueandequals extends Baseclass{
 	
 	@Test
 	public void tc1() {

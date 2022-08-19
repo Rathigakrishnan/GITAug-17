@@ -11,9 +11,9 @@ import org.junit.Test;
 
 
 import utility.org.LoginPOJO;
-import utility.org.utility;
+import utility.org.Baseclass;
 
-public class JunitwithURL extends utility {
+public class JunitwithURL extends Baseclass {
 
 	
 	@Test
