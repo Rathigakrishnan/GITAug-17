@@ -127,6 +127,8 @@ public class Baseclass {
 	}
 	private void Singam() {
 	System.out.println("Added notes from singam");
+	System.out.println("Added noted from kevin");
 	System.out.println("once again addedd from singam");
+
 }
 }
