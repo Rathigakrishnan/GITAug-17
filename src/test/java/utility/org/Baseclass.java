@@ -123,6 +123,9 @@ public class Baseclass {
 			}
 				return value;
 	
+				
 	}
-	
+	private void Singam() {
+	System.out.println("Added notes from singam");
+}
 }
