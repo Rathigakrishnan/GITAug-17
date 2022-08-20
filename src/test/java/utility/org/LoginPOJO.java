@@ -1,63 +1,42 @@
 package utility.org;
 
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.CacheLookup;
-import org.openqa.selenium.support.FindAll;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.FindBys;
 import org.openqa.selenium.support.PageFactory;
 
 public class LoginPOJO extends Baseclass{
 
+	//1.Non paramaterized constructor(ll nt have return type)
+	
 	public LoginPOJO(){
-		
 		PageFactory.initElements(driver, this);
 	}
 	
-	@CacheLookup
+	//2.private webelement
 	
 	@FindBy(id="email")
-	private WebElement emailtxt;
+	private WebElement txtUser;
 	
-	@FindBy(name="pass")
-	private WebElement passwordtxt;
+	@FindBy(id="pass")
+	private WebElement txtPass;
 	
-	@FindBy(name="Login")
-	private WebElement loginbtn;
-	
-	
-	@FindBys({
-		@FindBy(id="email"),
-		@FindBy(xpath="//input[@placeholder='Email address or phone number']")
+	@FindBy(xpath="//button[@name='loogin']")
+	private WebElement btnLogin;
 
-	})
-	private WebElement txtuser;
-	
-	@FindAll({
-		@FindBy(id="pass"),
-		@FindBy(name="password")
-	})
-	private WebElement txtpass;
-	
-
-	public WebElement getTxtuser() {
-		return txtuser;
+	public WebElement getTxtUser() {
+		return txtUser;
 	}
 
-	public WebElement getTxtpass() {
-		return txtpass;
+	public WebElement getTxtPass() {
+		return txtPass;
 	}
 
- public WebElement getEmailtxt() {
-		return emailtxt;
-	}
-
-	public WebElement getPasswordtxt() {
-		return passwordtxt;
-	}
-
-	public WebElement getLoginbtn() {
-		return loginbtn;
+	public WebElement getBtnLogin() {
+		return btnLogin;
 	}
 	
-}
+	
+	
+	}
+	
+

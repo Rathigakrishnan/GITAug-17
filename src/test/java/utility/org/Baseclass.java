@@ -2,11 +2,9 @@ package utility.org;
 
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.DateUtil;
 import org.apache.poi.ss.usermodel.Row;
@@ -16,9 +14,7 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.interactions.Actions;
-
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class Baseclass {
@@ -85,7 +81,7 @@ public class Baseclass {
 	
 	public  static String getData(int rowNumber, int cellNumber) throws IOException {
 			//File location
-			File f = new File("C:\\Users\\user\\eclipse-workspace\\Maven configuration\\Excel\\SampleExcel.xlsx");
+			File f = new File("C:\\Users\\user\\eclipse-workspace\\Clone Maven Configuration\\GITAug-17\\Excel\\SampleExcel.xlsx");
 			
 			//read the value from excel
 			FileInputStream fin = new FileInputStream(f);
@@ -119,7 +115,7 @@ public class Baseclass {
 			else {
 				double d = cell.getNumericCellValue();
 				
-				//dec t long, long to  string
+				//decimal t long, long to  string
 				
 				long l= (long)d;
 				

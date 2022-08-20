@@ -16,7 +16,7 @@ public class ExcelRead {
 	
 	public static void main(String[] args) throws IOException  {
 		//File location
-		File f = new File("C:\\Users\\user\\eclipse-workspace\\Maven configuration\\Excel\\SampleExcel.xlsx");
+		File f = new File("C:\\Users\\user\\eclipse-workspace\\Clone Maven Configuration\\GITAug-17\\Excel\\SampleExcel.xlsx");
 	
 	//read the value from excel
 	FileInputStream fin = new FileInputStream(f);

@@ -1,15 +1,16 @@
 package datadriven.org;
 
 import java.io.IOException;
-
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-
 import utility.org.Baseclass;
+import utility.org.LoginPOJO;
 
 public class Browserlaunch extends Baseclass {
+	
 	// to get the user name and password from the excel and execute in the site
-public static void main(String[] args) throws IOException {
+	// using LoginPOJO
+	
+	public static void main(String[] args) throws IOException {
 		
 		launchChrome();
 		winMax();
@@ -17,14 +18,19 @@ public static void main(String[] args) throws IOException {
 		printTitle();
 		printCurrentUrl();
 		
-		WebElement txtUser =driver.findElement(By.id("email"));
-		fill(txtUser,getData(5, 0));
-		rightClick(txtUser);
+		LoginPOJO l = new LoginPOJO();
 		
-		WebElement txtPass =driver.findElement(By.id("pass"));
-		fill(txtPass,getData(5, 2));
+		//method-1(this ll reduce the coding lines without getting return type
+		fill(l.getTxtUser(), getData(2, 1));
 		
-		dClick(txtPass);
+		//method-2
+		WebElement txtPass = l.getTxtPass();
+		fill(txtPass, getData(2, 0));
+		
+		WebElement btnLogin = l.getBtnLogin();
+		btnClick(btnLogin);
+		
+		
 	}
 
 }
