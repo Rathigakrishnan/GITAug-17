@@ -20,11 +20,11 @@ public class Browserlaunchnamepasswordfromexcelandexecute extends Baseclass {
 			printCurrentUrl();
 			
 			WebElement txtUser =driver.findElement(By.id("email"));
-			fill(txtUser,getData(5, 0));
+			fill(txtUser,getData(1, 0, "Greens", "C:\\\\Users\\\\user\\\\eclipse-workspace\\\\Clone Maven Configuration\\\\GITAug-17\\\\Excel\\\\SampleExcel.xlsx "));
 			rightClick(txtUser);
 			
 			WebElement txtPass =driver.findElement(By.id("pass"));
-			fill(txtPass,getData(5, 2));
+			fill(txtPass,getData(1, 1, "Greens", "C:\\\\Users\\\\user\\\\eclipse-workspace\\\\Clone Maven Configuration\\\\GITAug-17\\\\Excel\\\\SampleExcel.xlsx "));
 			
 			dClick(txtPass);
 		}

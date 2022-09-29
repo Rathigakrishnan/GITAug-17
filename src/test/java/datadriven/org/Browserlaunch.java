@@ -2,15 +2,20 @@ package datadriven.org;
 
 import java.io.IOException;
 import org.openqa.selenium.WebElement;
+
+
 import utility.org.Baseclass;
-import utility.org.LoginPOJO;
+
+import utility.org.Pojologin;
+
+
 
 public class Browserlaunch extends Baseclass {
 	
 	// to get the user name and password from the excel and execute in the site
 	// using LoginPOJO
 	
-	public static void main(String[] args) throws IOException {
+	public static void main(String[] args) throws IOException, InterruptedException  {
 		
 		launchChrome();
 		winMax();
@@ -18,19 +23,15 @@ public class Browserlaunch extends Baseclass {
 		printTitle();
 		printCurrentUrl();
 		
-		LoginPOJO l = new LoginPOJO();
+		Pojologin p = new Pojologin();
+		WebElement txtUser = p.getTxtUser();
+		fill(txtUser, getData(1, 0, "Greens", "C:\\Users\\user\\eclipse-workspace\\Clone Maven Configuration\\GITAug-17\\Excel\\SampleExcel.xlsx"));
 		
-		//method-1(this ll reduce the coding lines without getting return type
-		fill(l.getTxtUser(), getData(2, 1));
+		WebElement txtPass = p.getTxtPass();
+		fill(txtPass, getData(1, 1, "Greens", "C:\\Users\\user\\eclipse-workspace\\Clone Maven Configuration\\GITAug-17\\Excel\\SampleExcel.xlsx"));
 		
-		//method-2
-		WebElement txtPass = l.getTxtPass();
-		fill(txtPass, getData(2, 0));
-		
-		WebElement btnLogin = l.getBtnLogin();
+		WebElement btnLogin = p.getBtnLogin();
 		btnClick(btnLogin);
-		
-		
 	}
 
 }

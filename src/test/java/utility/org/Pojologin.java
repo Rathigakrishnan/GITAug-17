@@ -6,18 +6,13 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+public class Pojologin extends Baseclass {
 
-public class LoginPojo extends Baseclass  {
-	
-	//1. non paramaterized constructor
-	
-		public LoginPojo() {
+	public Pojologin() throws InterruptedException {
 		
+		Thread.sleep(2000);
 		PageFactory.initElements(driver, this);
-			
-		}
-	
-	//2.private WebElement
+	}
 	
 	@FindBy(id="email")
 	private WebElement txtUser;
@@ -42,5 +37,5 @@ public class LoginPojo extends Baseclass  {
 
 	
 
-}
+	}
 
